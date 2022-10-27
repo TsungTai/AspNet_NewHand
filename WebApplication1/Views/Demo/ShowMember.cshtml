@@ -1,0 +1,53 @@
+﻿@using WebApplication1.Models <!--前端欲使用後台創建類別Model也得using近來-->
+@Model IEnumerable<Member>    <!--丟入View()所傳來的model，物件名稱大小寫有差別嗎?多個的時候怎麼辦?-->
+    @{
+        ViewBag.Title = "ShowMember";
+    }
+
+    <h2>ShowMember</h2>
+    <div>
+        <!--ViewData不是動態型別在此 as 去指定正確型別-->
+        @{ foreach (var member in ViewData["Members"] as List<Member>)
+            {
+                <label>會員編號:</label> @member.Id
+                <br />
+                <label>會員姓名:</label> @member.Name
+                <br />
+                <label>年齡:</label> @member.Age
+                <hr />
+            }
+        }
+        <!--ViewBag動態型別會自動轉型，不需要 as 去指定型別，延伸問題資料量大時，處理速度可能會有影響-->
+        @{ foreach (var member in ViewBag.Members)
+            {
+                <label>會員編號:</label> @member.Id
+                <br />
+                <label>會員姓名:</label> @member.Name
+                <br />
+                <label>年齡:</label> @member.Age
+                <hr />
+            }
+        }
+        @{ foreach (var member in ViewBag.Members)
+            {
+                <label>會員編號:</label> @member.Id
+                <br />
+                <label>會員姓名:</label> @member.Name
+                <br />
+                <label>年齡:</label> @member.Age
+                <hr />
+            }
+        }
+        @{
+            foreach (var member in Model)
+            {
+                <label>會員編號:</label> @member.Id
+                <br />
+                <label>會員姓名:</label> @member.Name
+                <br />
+                <label>年齡:</label> @member.Age
+                <hr />
+            }
+        }
+    </div>
+

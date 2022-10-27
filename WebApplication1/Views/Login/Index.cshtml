@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Login_Page</h2>
+<div>
+    <form method="post" action="~/Login/Verify">
+        <!--action 是發送請求後導至指令路由-->
+        <label>Account</label>
+        <br />
+        <input type="text" name="account" />
+        <br /><br />
+        <label>Password</label>
+        <br />
+        <input type="text" name="password" />
+        <br /><br />
+        <input type="submit" name="submit" />
+    </form>
+    <form method="get" action="~/Login/Verify">
+        <!--method 要跟後端ActionResult的[Http請求]一致，否則會報錯404-->
+        <!--action 是發送請求後導至指令路由-->
+        <label>Account</label>
+        <br />
+        <input type="text" name="account" />
+        <br /><br />
+        <label>Password</label>
+        <br />
+        <input type="text" name="password" />
+        <br /><br />
+        <input type="submit" name="submit" />
+    </form>
+</div>
