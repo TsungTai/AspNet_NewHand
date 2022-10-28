@@ -126,6 +126,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\MyHtmlHelper.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\Member.cs" />
@@ -177,6 +178,7 @@
     <Content Include="Views\Login\Index_htmlhelp.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
