@@ -1,7 +1,4 @@
 ﻿@using WebApplication1.Helper;
-@{
-    ViewBag.Title = "Index_htmlhelp";
-}
 
 <h5>使用者註冊畫面</h5>
 
@@ -9,16 +6,21 @@
 
 <div>
     <!--使用@@using括弧起來 BinginForm() 相當於<form method="post" ></form> -->
+    <!--使用<label>元素的for屬性，通常跟隨著<input>元素其name屬性，使用<label>將<input>括弧起來即可-->
     @using (@Html.BeginForm("Index_htmlhelp", "LoginController"))
     {
         @Html.Label("使用者帳號")
-        @Html.TextBox("account", null, new {require = "require"})
+        @Html.TextBox("account", null, new { require = "require" })
+        <br>
         @Html.Label("登入密碼")
         @Html.Password("password", null, new { require = "require" })
+        <br>
         @Html.Label("姓名")
         @Html.TextBox("username", null, new { require = "require" })
+        <br>
         @Html.Label("電話")
         @Html.TextBox("userphone", null, new { require = "require" })
+        <br>
         @Html.Label("性別")
         @Html.Label("男生")
         @Html.CheckBox("Male")
@@ -26,6 +28,13 @@
         @Html.CheckBox("Male")
         @Html.Label("不公開")
         @Html.CheckBox("NoGender")
-        @Html.Hyperlink("https://www.ey.gov.tw/Page/37D1D3EDDE2438F8","相關契約說名");
+        <br>
+        @Html.Hyperlink("https://www.ey.gov.tw/Page/37D1D3EDDE2438F8", "相關契約說名");
+        <div>
+            <label>
+                註冊資料
+                <input type="submit" value="確定送出" />
+            </label>
+        </div>
     }
 </div>

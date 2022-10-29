@@ -175,7 +175,7 @@
     <Content Include="Views\Demo\ShowShoppingList.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Verify.cshtml" />
-    <Content Include="Views\Login\Index_htmlhelp.cshtml" />
+    <Content Include="Views\Login\SignUp_htmlhelp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

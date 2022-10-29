@@ -13,7 +13,13 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public ActionResult Index_htmlhelp()
+        [HttpGet]
+        public ActionResult SignUp_htmlhelp()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult SignUp_htmlhelp(Member member)
         {
             return View();
         }
